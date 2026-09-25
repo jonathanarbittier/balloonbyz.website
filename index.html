@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#171713" />
+    <meta
+      name="description"
+      content="Balloonbyz creates custom balloon installations, backdrops and event styling in London, Ontario."
+    />
+    <title>Balloonbyz — Event Styling in London, Ontario</title>
+    <link rel="preload" href="assets/hero.jpg" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Main navigation">
+      <a class="wordmark" href="#top" aria-label="Balloonbyz home">Balloonbyz</a>
+      <button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false">
+        <span>Menu</span>
+        <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+      </button>
+      <nav class="site-menu" id="site-menu" aria-label="Primary">
+        <a href="#work">Selected work</a>
+        <a href="#services">Services</a>
+        <a href="#inquiry">Start your event</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img src="assets/hero.jpg" alt="Neutral bridal event installation with sculptural balloons and flowers" />
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <h1 id="hero-title">Turning celebrations into unforgettable spaces.</h1>
+          <a class="text-link text-link--light" href="#inquiry">Start your event</a>
+        </div>
+      </section>
+
+      <section class="work section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <div>
+            <h2 id="work-title">Selected work</h2>
+          </div>
+          <p class="section-note">Thoughtful details.<br />A setting all your own.</p>
+        </div>
+
+        <div class="work-grid">
+          <figure class="work-item work-item--tall">
+            <img src="assets/engagement.jpg" alt="Blush engagement party balloon and fabric installation" loading="lazy" />
+          </figure>
+          <figure class="work-item work-item--short">
+            <img src="assets/baby-shower.jpg" alt="Sage and ivory baby shower setup in a bright conservatory" loading="lazy" />
+          </figure>
+          <figure class="work-item work-item--short">
+            <img src="assets/garden-party.jpg" alt="Colourful children's garden party balloon styling" loading="lazy" />
+          </figure>
+          <figure class="work-item work-item--tall">
+            <img src="assets/adult-dinner.jpg" alt="Candlelit adult birthday dinner with black and bronze balloons" loading="lazy" />
+          </figure>
+          <figure class="work-item work-item--tall">
+            <img src="assets/first-birthday.jpg" alt="Powder blue teddy bear first birthday installation" loading="lazy" />
+          </figure>
+          <figure class="work-item work-item--short">
+            <img src="assets/hero.jpg" alt="Cream bridal shower balloon installation" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="services section" id="services" aria-labelledby="services-title">
+        <div class="section-heading section-heading--services">
+          <div>
+            <h2 id="services-title">Made for your moment</h2>
+          </div>
+        </div>
+
+        <div class="service-list">
+          <article class="service">
+            <span class="service-number">01</span>
+            <div>
+              <h3>Balloon installations</h3>
+              <p>Custom balloon arrangements designed around your celebration and your space.</p>
+            </div>
+          </article>
+          <article class="service">
+            <span class="service-number">02</span>
+            <div>
+              <h3>Custom backdrops</h3>
+              <p>Statement backdrops that transform a setup into a complete scene.</p>
+            </div>
+          </article>
+          <article class="service">
+            <span class="service-number">03</span>
+            <div>
+              <h3>Rentals</h3>
+              <p>Event pieces and finishing details chosen to bring the whole setting together.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="inquiry" id="inquiry" aria-labelledby="inquiry-title">
+        <div class="inquiry-intro">
+          <h2 id="inquiry-title">Have something in mind?</h2>
+          <p>Tell us a little about your event. We’ll be in touch to shape the details together.</p>
+        </div>
+
+        <form class="inquiry-form" id="inquiry-form">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="contact">Email or phone</label>
+            <input id="contact" name="contact" autocomplete="email" required />
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="date">Event date</label>
+              <input id="date" name="date" type="date" />
+            </div>
+            <div class="field">
+              <label for="type">Event type</label>
+              <select id="type" name="type">
+                <option value="">Choose one</option>
+                <option>Birthday</option>
+                <option>Bridal event</option>
+                <option>Baby shower</option>
+                <option>Children’s party</option>
+                <option>Other celebration</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="idea">Tell us about your idea</label>
+            <textarea id="idea" name="idea" rows="3" required></textarea>
+          </div>
+          <button class="submit-button" type="submit">Send inquiry</button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-wordmark" href="#top">Balloonbyz</a>
+      <p>Custom balloon decor &amp; event styling<br />London, Ontario</p>
+      <div class="footer-bottom">
+        <a href="#inquiry">Inquire</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+        <span>© <span id="year"></span> Balloonbyz</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
