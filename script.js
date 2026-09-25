@@ -1,3 +1,16 @@
+function setStableViewportHeight() {
+  document.documentElement.style.setProperty('--initial-viewport-height', `${Math.round(window.innerHeight)}px`);
+}
+
+const isInstagramBrowser = /Instagram/i.test(navigator.userAgent);
+
+if (isInstagramBrowser) {
+  setStableViewportHeight();
+  window.addEventListener('orientationchange', () => {
+    window.setTimeout(setStableViewportHeight, 250);
+  }, { passive: true });
+}
+
 const menuButton = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.site-menu');
 

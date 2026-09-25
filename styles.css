@@ -18,6 +18,8 @@ body {
   color: var(--ink);
   font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  touch-action: pan-y;
 }
 body.menu-open { overflow: hidden; }
 a { color: inherit; text-decoration: none; }
@@ -70,27 +72,23 @@ body.menu-open .site-header { color: #fff; }
 .menu-toggle[aria-expanded="true"] .menu-icon i:last-child { top: 6px; transform: rotate(-45deg); }
 .site-menu {
   background: var(--ink);
-  display: flex;
+  display: none;
   flex-direction: column;
   font-family: var(--serif);
   font-size: clamp(38px, 13vw, 58px);
   inset: 0;
   justify-content: center;
-  opacity: 0;
   padding: 80px 24px 32px;
-  pointer-events: none;
   position: fixed;
-  transform: translateY(-12px);
-  transition: opacity .25s ease, transform .25s ease;
   z-index: -1;
 }
 .site-menu a { border-bottom: 1px solid rgba(255,255,255,.22); padding: 17px 0; }
-.site-menu.is-open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.site-menu.is-open { display: flex; z-index: -1; }
 
 .hero {
   background: #777269;
   color: #fff;
-  height: 100svh;
+  height: var(--initial-viewport-height, 100svh);
   min-height: 640px;
   overflow: hidden;
   position: relative;
