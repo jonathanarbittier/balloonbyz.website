@@ -9,7 +9,8 @@
       content="Balloonbyz creates custom balloon installations, backdrops and event styling in London, Ontario."
     />
     <title>Balloonbyz — Event Styling in London, Ontario</title>
-    <link rel="preload" href="assets/hero.jpg" as="image" />
+    <link rel="preload" href="assets/hero-mobile.jpg" as="image" media="(max-width: 767px)" fetchpriority="high" />
+    <link rel="preload" href="assets/hero.jpg" as="image" media="(min-width: 768px)" fetchpriority="high" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -28,7 +29,10 @@
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <img src="assets/hero.jpg" alt="Neutral bridal event installation with sculptural balloons and flowers" />
+        <picture>
+          <source media="(max-width: 767px)" srcset="assets/hero-mobile.jpg" />
+          <img src="assets/hero.jpg" width="1600" height="2000" alt="Neutral bridal event installation with sculptural balloons and flowers" fetchpriority="high" />
+        </picture>
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="hero-copy">
           <h1 id="hero-title">Turning celebrations into unforgettable spaces.</h1>
@@ -46,22 +50,40 @@
 
         <div class="work-grid">
           <figure class="work-item work-item--tall">
-            <img src="assets/engagement.jpg" alt="Blush engagement party balloon and fabric installation" loading="lazy" />
+            <picture>
+              <source media="(max-width: 767px)" srcset="assets/engagement-mobile.jpg" />
+              <img src="assets/engagement.jpg" width="1333" height="2000" alt="Blush engagement party balloon and fabric installation" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <figure class="work-item work-item--short">
-            <img src="assets/baby-shower.jpg" alt="Sage and ivory baby shower setup in a bright conservatory" loading="lazy" />
+            <picture>
+              <source media="(max-width: 767px)" srcset="assets/baby-shower-mobile.jpg" />
+              <img src="assets/baby-shower.jpg" width="1333" height="2000" alt="Sage and ivory baby shower setup in a bright conservatory" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <figure class="work-item work-item--short">
-            <img src="assets/garden-party.jpg" alt="Colourful children's garden party balloon styling" loading="lazy" />
+            <picture>
+              <source media="(max-width: 767px)" srcset="assets/garden-party-mobile.jpg" />
+              <img src="assets/garden-party.jpg" width="1333" height="2000" alt="Colourful children's garden party balloon styling" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <figure class="work-item work-item--tall">
-            <img src="assets/adult-dinner.jpg" alt="Candlelit adult birthday dinner with black and bronze balloons" loading="lazy" />
+            <picture>
+              <source media="(max-width: 767px)" srcset="assets/adult-dinner-mobile.jpg" />
+              <img src="assets/adult-dinner.jpg" width="1333" height="2000" alt="Candlelit adult birthday dinner with black and bronze balloons" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <figure class="work-item work-item--tall">
-            <img src="assets/first-birthday.jpg" alt="Powder blue teddy bear first birthday installation" loading="lazy" />
+            <picture>
+              <source media="(max-width: 767px)" srcset="assets/first-birthday-mobile.jpg" />
+              <img src="assets/first-birthday.jpg" width="1333" height="2000" alt="Powder blue teddy bear first birthday installation" loading="lazy" decoding="async" />
+            </picture>
           </figure>
           <figure class="work-item work-item--short">
-            <img src="assets/hero.jpg" alt="Cream bridal shower balloon installation" loading="lazy" />
+            <picture>
+              <source media="(max-width: 767px)" srcset="assets/hero-mobile.jpg" />
+              <img src="assets/hero.jpg" width="1600" height="2000" alt="Cream bridal shower balloon installation" loading="lazy" decoding="async" />
+            </picture>
           </figure>
         </div>
       </section>
@@ -150,6 +172,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

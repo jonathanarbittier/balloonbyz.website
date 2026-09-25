@@ -95,7 +95,8 @@ body.menu-open .site-header { color: #fff; }
   overflow: hidden;
   position: relative;
 }
-.hero > img { height: 100%; object-fit: cover; object-position: 49% center; }
+.hero > picture { display: block; height: 100%; }
+.hero > picture > img { height: 100%; object-fit: cover; object-position: 49% center; }
 .hero-shade {
   background: linear-gradient(to bottom, rgba(0,0,0,.24) 0, transparent 28%, transparent 52%, rgba(0,0,0,.68) 100%);
   inset: 0;
@@ -136,10 +137,11 @@ body.menu-open .site-header { color: #fff; }
 .section-note { color: var(--muted); font-size: 10px; line-height: 1.35; margin: 0 0 2px; text-align: right; }
 .work { background: var(--light); }
 .work-grid { display: grid; gap: 8px; grid-template-columns: 1fr 1fr; }
-.work-item { margin: 0; min-width: 0; }
-.work-item img { height: 100%; object-fit: cover; transition: filter .3s ease; }
-.work-item--tall img { aspect-ratio: .72; }
-.work-item--short img { aspect-ratio: .88; }
+.work-item { margin: 0; min-width: 0; overflow: hidden; }
+.work-item picture { display: block; height: 100%; }
+.work-item img { height: 100%; object-fit: cover; }
+.work-item--tall { aspect-ratio: .72; }
+.work-item--short { aspect-ratio: .88; }
 .work-item:nth-child(3), .work-item:nth-child(5) { margin-top: -19%; }
 
 .services { background: var(--paper); }
@@ -244,7 +246,7 @@ body.menu-open .site-header { color: #fff; }
   }
   .site-menu a { border: 0; padding: 8px 0; }
   .hero { min-height: 720px; }
-  .hero > img { object-position: center 47%; }
+  .hero > picture > img { object-position: center 47%; }
   .hero-shade {
     background:
       linear-gradient(to right, rgba(0, 0, 0, .46) 0%, rgba(0, 0, 0, .19) 45%, rgba(0, 0, 0, .04) 76%),
